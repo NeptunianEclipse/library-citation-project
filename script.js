@@ -1,8 +1,16 @@
 function getInfo(title, author, year) {
-	var url = 'https://api.elsevier.com/content/search/scopus?query=ref(' + title + ')%20and%20ref(' + author + ')%20and%20ref(' + year + ')&apiKey=7f59af901d2d86f78a1fd60c1bf9426a';
-	$.ajax({url: url, success: function(result) {
-		console.log(result);
-	}});
+	var apiKey = '2e4b9d6d318ee089e673e46b3f38493b';
+	var url = 
+	$.ajax({
+		url: url, 
+		dataType: 'jsonp',
+		crossDomain: true,
+        type:"GET",
+        contentType: "application/json; charset=utf-8",
+		success: function(result) {
+			// console.log(String(result);
+		}
+	});
 }
 
 getInfo('welfare-of-dogs', 'stafford', '2006');
