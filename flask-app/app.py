@@ -54,16 +54,14 @@ def citation_table():
   "year": search_citation_list[2],
   "citations": citation_number
 }]
-  
-  #dataStr = str(dictTuple)
+  return True
 
-  #d = collections.OrderedDict()
-  #data = dict((y, x) for x, y in dictTuple)
+"""  
   return render_template("citations_table.html",
     data=data, 
     columns=columns, 
     title='Citations Table')  
-
+"""
 """
 data = [{
   "author": "bootstrap-table",
@@ -85,4 +83,4 @@ data = [{
 '''
 
 if __name__ == '__main__':
-	app.run(DEBUG=True)
+	app.run(DEBUG=True, TEMPLATES_AUTO_RELOAD=True)
